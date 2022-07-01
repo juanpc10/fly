@@ -15,3 +15,4 @@ docker-compose -f ${FILE_PATH} run initdb
 
 docker-compose -f ${FILE_PATH} build main
 docker-compose -f ${FILE_PATH} run main
+
