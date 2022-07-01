@@ -8,9 +8,9 @@ jobs:
     name: build-deploy-dev
     runs-on: self-hosted
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@master
       with:
-        ref: feature/get-all-endpoint
+        ref: cicd
     - name: build-deploy-2
       run: |
         ~/build-deploy-2
