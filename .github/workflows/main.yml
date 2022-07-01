@@ -1,16 +1,16 @@
 on: 
   push:
     branches:
-      - dev
+      - juanpc10-patch-1
 name: deploy-dev
 jobs:
   deploy:
     name: build-deploy-dev
     runs-on: self-hosted
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/first-interaction@v1.1.0
       with:
-        ref: dev
+        ref: juanpc10-patch-1
     - name: build-deploy
       run: |
-        ~/build-deploy
+        ~/build-deploy-2
