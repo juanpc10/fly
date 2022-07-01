@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: gbv-dashboard
-          image: localhost:5000/gbv-dashboard:registry
+          image: registry.digitalocean.com/mi-registry/test:registry
           imagePullPolicy: Always
           resources:
             requests:
