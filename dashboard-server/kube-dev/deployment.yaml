@@ -62,3 +62,4 @@ spec:
               value: 'https://graph.facebook.com/v9.0'
             - name: FACEBOOK_APP_ID
               value: '790352681363186'
+
