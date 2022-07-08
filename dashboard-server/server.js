@@ -21,7 +21,7 @@ app
   })
   .use('/health', (req, res) => {
     // TODO: check connection to DB
-    return res.status(200).send('hola');
+    return res.status(200).send("demo");
   });
 
 const options = {
