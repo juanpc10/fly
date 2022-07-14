@@ -1,4 +1,4 @@
-FROM node:16.3.0-alpine
+FROM mhart/alpine-node:latest
 
 WORKDIR /usr/src/app
 
