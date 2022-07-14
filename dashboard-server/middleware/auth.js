@@ -1,8 +1,18 @@
-const { MIDDLEWARE_JWT: clientConfig } = require('../config');
-const { auth } = require('express-oauth2-jwt-bearer');
+const jwt = require('express-jwt');
+const { JWT: clientConfig, SERVER_JWT: serverConfig } = require('../config');
 
 // make middleware that tries auth0 client then if that fails
 // tries auth0 server application...
-const checkJwt = auth(clientConfig);
+function auth(req, res, next) {
+  jwt(clientConfig)(req, res, (err, res) => {
+    if (!err) return next();
+    if (err && err.name === 'UnauthorizedError') {
 
-module.exports = checkJwt;
+      return jwt(serverConfig)(req, res, next);
+    } else {
+      return next(err);
+    }
+  });
+}
+
+module.exports = auth;
