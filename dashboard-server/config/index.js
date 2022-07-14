@@ -68,6 +68,10 @@ const config = {
   SERVER_JWT: {
     secret: envVars.AUTH0_DASHBOARD_SECRET
   },
+  MIDDLEWARE_JWT: {
+    issuerBaseURL: envVars.AUTH0_HOST,
+    audience: `${envVars.AUTH0_HOST}/api/v2/`
+  },
   DATABASE_CONFIG: {
     user: isTest() ? 'root' : envVars.DB_USER || 'postgres',
     host: isTest() ? 'localhost' : envVars.DB_HOST || 'localhost',
