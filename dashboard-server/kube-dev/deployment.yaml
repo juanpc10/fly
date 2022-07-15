@@ -30,6 +30,8 @@ spec:
           env:
             - name: TYPEFORM_URL
               value: 'https://api.typeform.com'
+            - name: AUTH0_HOST
+              value: "https://dev-x7eacpbs.us.auth0.com"
             - name: FORMCENTRAL_URL
               value: 'http://gbv-formcentral'
             - name: CUBEJS_API_SECRET
