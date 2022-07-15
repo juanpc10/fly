@@ -43,6 +43,8 @@ spec:
         env:
         - name: CHATBASE_BACKEND
           value: "@vlab-research/chatbase-postgres"
+        - name: AUTH0_HOST
+          value: "https://dev-x7eacpbs.us.auth0.com"
         - name: CHATBASE_DATABASE
           value: "chatroach"
         - name: CHATBASE_USER
